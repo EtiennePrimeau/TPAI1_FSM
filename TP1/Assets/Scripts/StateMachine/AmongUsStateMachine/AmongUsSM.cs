@@ -79,6 +79,7 @@ public class AmongUsSM : StateMachine<AmongUsState>
         base.FixedUpdate();
     }
 
+    //Called by script FpsGun (line 68)
     public void SetHasBeenShot(bool value)
     {
         HasBeenShot = value;

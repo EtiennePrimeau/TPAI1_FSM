@@ -45,6 +45,7 @@ public class EscapingState : AmongUsState
         if (m_timer < 0.0f)
         {
             EvaluatePlayerDistance();
+            m_timer = m_playerDistanceCheckFrequency;
         }
         m_timer -= Time.deltaTime;
     }
