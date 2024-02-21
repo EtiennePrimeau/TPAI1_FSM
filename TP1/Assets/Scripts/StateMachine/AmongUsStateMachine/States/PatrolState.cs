@@ -29,7 +29,7 @@ public class PatrolState : AmongUsState
 
     public override bool CanEnter(IState currentState)
     {
-        return true;
+        return !m_stateMachine.HasBeenShot;
     }
 
     public override bool CanExit()
@@ -39,7 +39,7 @@ public class PatrolState : AmongUsState
             return false;
         }
 
-        return m_stateMachine.DistanceToPlayer < 20;
+        return m_stateMachine.DistanceToPlayer < 20 || m_stateMachine.HasBeenShot;
     }
 
     private void SetNextPatrolObjective()

@@ -38,7 +38,7 @@ public class PlayerFollowState : AmongUsState
 
     public override bool CanExit()
     {
-        return m_stateMachine.DistanceToPlayer >= 10;
+        return m_stateMachine.DistanceToPlayer >= 10 || m_stateMachine.HasBeenShot;
     }
 
     private void MoveTowardsPlayer()
