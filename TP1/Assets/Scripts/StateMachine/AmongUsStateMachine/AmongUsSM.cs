@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
 public class AmongUsSM : StateMachine<AmongUsState>
 {
     [field: SerializeField] public Transform StartTransform { get; private set; } = null;
